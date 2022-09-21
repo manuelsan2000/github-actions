@@ -62,6 +62,6 @@ jobs:
         run: npx surge --project ./build --domain like-cars.surge.sh
       - name: Upload Coverage Reports
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: npx code-coverage
+        run: npx codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
