@@ -5,7 +5,6 @@ on:
     branches: [develop, master]
   push:
     branches: [develop, master]
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -61,8 +60,8 @@ jobs:
       - name: Deploy to Production
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: npx surge --project ./build --domain like-cars.surge.sh
-      - name: Upload coverage reports
+      - name: Upload Coverage Reports
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: npx code-coverage
-        env: 
+        env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
