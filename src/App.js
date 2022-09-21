@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React with GHActions
+          Learn React with GHActions22
         </a>
       </header>
     </div>
